@@ -1,3 +1,36 @@
+/* sass variables  */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif; }
 
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2f2235; }
+
+h1 {
+  color: #f2f2f2;
+  font-weight: 300;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 60px; }
+
+header p {
+  color: #f2f2f2;
+  padding-right: 60px; }
+
+.blue-header {
+  color: #34d1d1; }
+
+.accordion-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.accordion-header hr {
+  width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */
