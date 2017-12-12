@@ -1,4 +1,7 @@
 $('.tab').click(function(){
-  console.log('fuck', $(this).next('article'))
+  $('.active-tab').removeClass('active-tab')
+  $('.active-tab-header').removeClass('active-tab-header')
+  $(this).toggleClass('active-tab-header')
+  $(this).next('article').toggleClass('active-tab')
 })
 

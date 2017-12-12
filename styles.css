@@ -54,6 +54,9 @@ header p {
   width: 25%;
   text-align: center; }
 
+.accordion-tabs ol li .active-tab-header {
+  background-color: pink; }
+
 .first-tab {
   left: 0%; }
 
@@ -82,6 +85,15 @@ header p {
 
 .tab-img-one {
   background-image: url("assets/tabs-1.jpeg"); }
+
+.tab-img-two {
+  background-image: url("assets/tabs-2.jpeg"); }
+
+.tab-img-three {
+  background-image: url("assets/tabs-3.jpeg"); }
+
+.tab-img-four {
+  background-image: url("assets/tabs-4.jpeg"); }
 
 /* xmas lights */
 .lightrope {
