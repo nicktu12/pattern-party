@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", serif; }
+  font-family: "Open Sans", serif;
+  box-sizing: border-box; }
 
 header {
   display: flex;
@@ -21,6 +22,9 @@ h1 {
 header p {
   color: #f2f2f2;
   padding-right: 60px; }
+
+h3 {
+  padding: 5px; }
 
 .blue-header {
   color: #34d1d1; }
@@ -41,7 +45,6 @@ header p {
 
 .accordion-tabs {
   width: 80vw;
-  height: 35vw;
   position: relative; }
 
 .accordion-tabs ol {
@@ -51,11 +54,17 @@ header p {
 
 .accordion-tabs ol li .tab {
   position: absolute;
+  top: -35px;
   width: 25%;
-  text-align: center; }
+  text-align: center;
+  background-color: #f2f2f2;
+  border-right: 1px solid white;
+  border-left: 1px solid white; }
 
 .accordion-tabs ol li .active-tab-header {
-  background-color: pink; }
+  background-color: white;
+  border: 1px solid #d1d2d3;
+  border-bottom: none; }
 
 .first-tab {
   left: 0%; }
@@ -70,31 +79,100 @@ header p {
   left: 75%; }
 
 .accordion-tabs ol li .tab-text {
-  padding-top: 35px; }
+  padding: 35px 15px 15px 0px; }
 
 .accordion-tabs ol li article {
   display: none; }
 
 .accordion-tabs ol li .active-tab {
-  display: flex; }
+  display: flex;
+  border: 1px solid #d1d2d3; }
 
-.tab-image {
-  margin-top: 35px;
-  height: 305px;
-  width: 605px; }
+.tab-image img {
+  padding: 15px; }
 
-.tab-img-one {
-  background-image: url("assets/tabs-1.jpeg"); }
+.view-code-button {
+  background-color: #3f3244;
+  border: none;
+  height: 50px;
+  width: 33vw;
+  margin: 50px;
+  color: white;
+  font-size: 16px; }
 
-.tab-img-two {
-  background-image: url("assets/tabs-2.jpeg"); }
+.accordion-plus, .accordion-minus {
+  display: none;
+  font-size: 24px; }
 
-.tab-img-three {
-  background-image: url("assets/tabs-3.jpeg"); }
+@media only screen and (max-width: 700px) {
+  header {
+    display: block;
+    text-align: center; }
 
-.tab-img-four {
-  background-image: url("assets/tabs-4.jpeg"); }
+  header h1, header p {
+    padding: 15px; }
 
+  .accordion-header {
+    display: block;
+    text-align: center; }
+
+  .accordion-header hr {
+    margin-left: 40%;
+    width: 20%;
+    margin-top: 25px; }
+
+  .accordion-tabs ol li .active-tab-header {
+    position: initial;
+    border: none; }
+
+  .accordion-tabs ol li .active-tab {
+    border: none;
+    display: initial; }
+
+  .accordion-tabs ol li .tab-text {
+    padding: 15px; }
+
+  .accordion-tabs ol {
+    display: initial; }
+
+  .accordion-tabs ol li {
+    position: relative; }
+
+  .accordion-tabs ol li .tab {
+    position: initial;
+    width: 100%;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    text-align: initial;
+    padding-left: 10px; }
+
+  .accordion-tabs {
+    border: 1px solid #d1d2d3; }
+
+  .tab-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    padding: 0px; }
+
+  .accordion-plus, .accordion-minus {
+    display: initial;
+    position: absolute;
+    right: 15px;
+    top: 2px; }
+
+  .accordion-minus {
+    right: 17px; }
+
+  .tab .accordion-minus {
+    display: none; }
+
+  .active-tab-header .accordion-plus {
+    display: none; }
+
+  .active-tab-header .accordion-minus {
+    display: initial; } }
 /* xmas lights */
 .lightrope {
   text-align: center;
