@@ -104,7 +104,112 @@ h3 {
   display: none;
   font-size: 24px; }
 
+.flexible-cards-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "topLeft topLeft topRight" "middleLeft middle middleRight" "bottomLeft bottomRight bottomRight";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 80vw;
+  margin: auto; }
+
+.flexible-cards-section article h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 26vw; }
+
+.flexible-card-1 {
+  grid-area: topLeft; }
+  .flexible-card-1 div {
+    height: 260px;
+    background-image: url("assets/flex-1.jpeg"); }
+
+.flexible-card-2 {
+  grid-area: topRight; }
+  .flexible-card-2 div {
+    height: 260px;
+    background-image: url("assets/flex-2.jpeg"); }
+
+.flexible-card-3 {
+  grid-area: middleLeft; }
+  .flexible-card-3 div {
+    height: 260px;
+    background-image: url("assets/flex-3.jpeg"); }
+
+.flexible-card-4 {
+  grid-area: middle; }
+  .flexible-card-4 div {
+    height: 260px;
+    background-image: url("assets/flex-4.jpeg"); }
+
+.flexible-card-5 {
+  grid-area: middleRight; }
+  .flexible-card-5 div {
+    height: 260px;
+    background-image: url("assets/flex-5.jpeg"); }
+
+.flexible-card-6 {
+  grid-area: bottomLeft; }
+  .flexible-card-6 div {
+    height: 260px;
+    background-image: url("assets/flex-6.jpeg"); }
+
+.flexible-card-7 {
+  grid-area: bottomRight; }
+  .flexible-card-7 div {
+    height: 260px;
+    background-image: url("assets/flex-7.jpeg"); }
+
+.flexible-cards-section article {
+  border: 1px solid #d1d2d3; }
+
+.flexible-cards-section article div img {
+  width: 100%; }
+
+.flexible-cards-section article h4 {
+  padding: 10px; }
+
+.flexible-cards-section article div {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 @media only screen and (max-width: 700px) {
+  /* flex cards only */
+  .flexible-cards-section {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6" "card7"; }
+
+  .flexible-card-1 {
+    grid-area: card1; }
+
+  .flexible-card-2 {
+    grid-area: card2; }
+
+  .flexible-card-3 {
+    grid-area: card3; }
+
+  .flexible-card-4 {
+    grid-area: card4; }
+
+  .flexible-card-5 {
+    grid-area: card5; }
+
+  .flexible-card-6 {
+    grid-area: card6; }
+
+  .flexible-card-7 {
+    grid-area: card7; }
+
+  .flexible-cards-section article h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80vw; }
+
+  /* end flex cards */
   header {
     display: block;
     text-align: center; }
