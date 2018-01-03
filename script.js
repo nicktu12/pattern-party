@@ -5,3 +5,8 @@ $('.tab').click(function(){
   $(this).next('article').toggleClass('active-tab')
 })
 
+$('.header-button').click(function(){
+  $('.header-ul').toggleClass('header-hidden') 
+  $('.header-search').toggleClass('header-hidden') 
+  $('.header-bar-section').toggleClass('extra-padding')
+})
